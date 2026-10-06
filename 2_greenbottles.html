@@ -23,10 +23,21 @@ const arrGreenBottles = [
     ["Fructis", "No"],
     ["Tap water", "Yes!"]
 ];
+   function getBottles(arrBot, intBott) {
+    for (let i = 0; i < intBott; i++) {
+        const strBottle = arrBot[i][0] + " - " + arrBot[i][1];
 
-function getBottles(arrBot, intBott) {for (let i = 0; i < intBott; i++) {const strBottle = arrBot[i][0] + " - " + arrBot[i][1];if (arrBot[i][1] === "Yes!") {document.write("<strong>" + strBottle + "</strong><br>");} else {document.write(strBottle + "<br>");}}
+        if (arrBot[i][1] === "Yes!") {
+            document.write("<strong>" + strBottle + "</strong><br>");
+        } else {
+            document.write(strBottle + "<br>");
+        }
+    }
+}
+
 document.write("<h3>Here are ten green bottles... but are they really green?</h3><p>");
 getBottles(arrGreenBottles, intGreenBottles);
+document.write("</p>");
 document.write("</p>");
 </script>
 
